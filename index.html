@@ -17,9 +17,9 @@
   <!-- AOS CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Bootstrap files -->
-  <link rel="stylesheet" href="/Scss Bootstrap/scss/bootstrap.css">tra
+  <link rel="stylesheet" href="Scss_Bootstrap/scss/bootstrap.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="style/style.css">
 
 </head>
 
@@ -51,6 +51,9 @@
           </ul>
         </div>
       </div>
+      <!-- <div class="loginIcon">
+        <i class="fas fa-user circle-icon ml-3" data-toggle="modal" data-target="#loginModal"></i>
+      </div> -->
 
       <!-- Modal -->
       <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -62,6 +65,7 @@
               </button>
             </div>
             <div class="modal-body">
+              <h6>使用社交平台帳戶登入</h6>
               <h6>Login with social media account</h6>
               <div class="social-login my-4">
                 <div class="social-icon">
@@ -74,6 +78,7 @@
                 <span id="divider-txt">OR</span>
               </div>
               <div class="email-login mt-3">
+                <h6>會員帳號登入</h6>
                 <h6>Login with email</h6>
                 <form>
                   <div class="row">
@@ -116,10 +121,10 @@
         <div class="overlay carousel-item active" data-interval="3000">
           <img src="img/hero-1.jpg" class="d-block w-100" alt="canoe">
           <div class="hero-caption d-md-block">
-            <h3><span>E</span>XPLORE</h3>
-            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld
+            <h3 data-aos="fade-down"><span>E</span>XPLORE</h3>
+            <h3 class="font-weight-light" data-aos="fade-down"><span>T</span>he <span>W</span>orld
             </h3>
-            <p>Travel to Live, Live to travel</p>
+            <p data-aos="fade-up" data-aos-offset="0">Travel to Live, Live to travel</p>
           </div>
         </div>
         <div class="overlay carousel-item" data-interval="3000">
@@ -200,6 +205,7 @@
   <!-- About Us Section -->
   <section id="about">
     <div class="heading" data-aos="fade-down">
+      <h3>關於我們</h3>
       <h1><span>About</span> Us</h1>
     </div>
     <div class="content">
@@ -217,6 +223,7 @@
     <div class="container mt-5 pt-4">
       <div class="heading d-flex flex-row" data-aos="fade-up">
         <h1><span>Tours</span></h1>
+        <h3>推薦行程</h3>
       </div>
       <div class="content d-flex flex-row" data-aos="fade-up">
         <img src="./img/plane-path.svg" data-aos="fade-up-right">
@@ -336,6 +343,7 @@
   <section id="services">
 
     <div class="heading mt-5 pt-5" data-aos="fade-down">
+      <h3>服務項目</h3>
       <h1 class="mb-5">Our <span>Services</span></h1>
     </div>
 
@@ -427,6 +435,7 @@
 
   <section id="testimonials">
     <div class="heading" data-aos="fade-up">
+      <h3>客戶評價</h3>
       <h1>what our <span>clients</span> say</h1>
     </div>
     <div class="content" data-aos="fade-up">
@@ -541,8 +550,10 @@
 
   <section id="contact">
     <div class="heading pt-3" data-aos="fade-up">
+      <h3>聯絡我們</h3>
       <h1><span>Contact</span> Us</h1>
       <div class="content">
+        <p>有任何問題歡迎聯絡我們！</p>
       </div>
     </div>
 
