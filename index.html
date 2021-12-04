@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Travel</title>
+
+  <!-- Font Awesome CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Concert+One&family=Fuzzy+Bubbles&family=Poppins:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <!-- AOS CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap files -->
+  <link rel="stylesheet" href="/Scss Bootstrap/scss/bootstrap.css">tra
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar Section -->
+  <header>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.svg" alt="logo"></a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="loginIcon order-2 order-lg-3">
+          <i class="fas fa-user circle-icon ml-3" data-toggle="modal" data-target="#loginModal"></i>
+        </div>
+
+        <div class="collapse navbar-collapse order-3 order-lg-2" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ml-3"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item ml-3"><a href="#about" class="nav-link">About Us</a></li>
+            <li class="nav-item ml-3"><a href="#tours" class="nav-link">Tours</a></li>
+            <li class="nav-item ml-3"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item ml-3"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li class="nav-item ml-3"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header py-0 border-0">
+              <button type="button" class="close mt-1" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times exit-icon"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Login with social media account</h6>
+              <div class="social-login my-4">
+                <div class="social-icon">
+                  <i class="fab fa-facebook fb-icon"></i>
+                  <i class="fab fa-google-plus gp-icon"></i>
+                  <i class="fab fa-line line-icon"></i>
+                </div>
+              </div>
+              <div class="divider">
+                <span id="divider-txt">OR</span>
+              </div>
+              <div class="email-login mt-3">
+                <h6>Login with email</h6>
+                <form>
+                  <div class="row">
+                    <div class="col">
+                      <i class="fas fa-envelope icon"></i>
+                      <input class="form-control mt-2 mb-4 px-5 py-4" type="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <i class="fas fa-lock icon mt-2"></i>
+                      <input class="form-control mt-2 px-5 py-4" type="password" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col forgotPw pb-4">
+                      <a href="">Forgot Passowrd?</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn mb-4">Login</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- </nav> -->
+
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <div id="heroResponsive" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="overlay carousel-item active" data-interval="3000">
+          <img src="img/hero-1.jpg" class="d-block w-100" alt="canoe">
+          <div class="hero-caption d-md-block">
+            <h3><span>E</span>XPLORE</h3>
+            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld
+            </h3>
+            <p>Travel to Live, Live to travel</p>
+          </div>
+        </div>
+        <div class="overlay carousel-item" data-interval="3000">
+          <img src="img/hero-2.jpg" class="d-block w-100" alt="grand-canyon">
+          <div class="hero-caption d-md-block">
+            <h3><span>E</span>XPLORE</h3>
+            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld</h3>
+            <p>Travel to Live, Live to travel</p>
+          </div>
+        </div>
+        <div class="overlay carousel-item" data-interval="3000">
+          <img src="/img/hero-4.jpg" class="d-block w-100" alt="greece">
+          <div class="hero-caption d-md-block">
+            <h3><span>E</span>XPLORE</h3>
+            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld</h3>
+            <p>Travel to Live, Live to travel</p>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-btn">
+        <button class="carousel-control-prev" type="button" data-target="#heroResponsive" data-slide="prev">
+          <span aria-hidden="true"><i class="fas fa-chevron-left prev-btn"></i></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#heroResponsive" data-slide="next">
+          <span aria-hidden="true"><i class="fas fa-chevron-right next-btn"></i></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Search Form  -->
+  <section>
+    <div class="form-section pb-5 mb-3">
+      <div class="container">
+        <div class="search-form">
+          <form>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="form-group" data-aos="zoom-in" data-aos-delay="150">
+                    <label for="location"><i class="fas fa-map-marker-alt ml-2 mr-2"></i>Location</label>
+                    <input type="text" class="form-control" id="location" placeholder="Where do you want to go?">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="form-group" data-aos="zoom-in" data-aos-delay="300">
+                    <label for="travel-date"><i class="fas fa-calendar-alt ml-2 mr-2"></i>Date</label>
+                    <input class="form-control" type="date" id="travel-date">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="form-group" data-aos="zoom-in" data-aos-delay="450">
+                    <label for="traveler"><i class="fas fa-user-friends ml-2 mr-2"></i>Traveler</label>
+                    <input type="number" min="0" max="50" class="form-control" id="traveler" placeholder="Guests">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-btn" data-aos="zoom-in" data-aos-delay="600">
+                  <button class="submit-btn">Search</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <div class="heading" data-aos="fade-down">
+      <h1><span>About</span> Us</h1>
+    </div>
+    <div class="content">
+      <p data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore
+        magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisiut aliquip ex eacommodo
+        consequat. </p>
+      <a class="read-more btn" href="#about" data-aos="fade-up">Read More</a>
+    </div>
+  </section>
+
+  <!-- Tours Section -->
+
+  <section id="tours">
+    <div class="container mt-5 pt-4">
+      <div class="heading d-flex flex-row" data-aos="fade-up">
+        <h1><span>Tours</span></h1>
+      </div>
+      <div class="content d-flex flex-row" data-aos="fade-up">
+        <img src="./img/plane-path.svg" data-aos="fade-up-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. </p>
+        <img src="./img/plane-path.svg" data-aos="fade-left">
+      </div>
+    </div>
+
+    <div class="container-md tour-cards">
+      <div class="see-more" data-aos="fade-left">
+        <a href="#">See More
+          <i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+      </div>
+      <div class="cards-container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="img/colloseum.jpg" class="card-img-top" alt="colloseum">
+              <div class="card-body">
+                <h5 class="card-title">Visit the Colloseum</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Rome, Italy</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="img/thailand.jpeg" class="card-img-top" alt="Phi Phi Island">
+              <div class="card-body">
+                <h5 class="card-title">Visit the Temple</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Chiang Mai, Thailand</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="/img/pisa-italy.jpg" class="card-img-top" alt="pisa-tower">
+              <div class="card-body">
+                <h5 class="card-title">Visit the Pisa Tower</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Pisa, Italy</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="/img/conrad-maldives-island.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Visit Conrad Maldives Rangali Island</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Rangali Island, Maldives</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="img/eiffel-tower.jpg" class="card-img-top" alt="eiffel">
+              <div class="card-body">
+                <h5 class="card-title">Visit the Eiffel Tower</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Paris, France</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+              <img src="img/canada.jpg" class="card-img-top" alt="canda">
+              <div class="card-body">
+                <h5 class="card-title">Visit Banff National Park</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Alberta, Canada</span>
+                </h6>
+                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <div class="price">
+                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                </div>
+                <a href="#" class="btn">book now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+
+    <div class="heading mt-5 pt-5" data-aos="fade-down">
+      <h1 class="mb-5">Our <span>Services</span></h1>
+    </div>
+
+    <div class="service-container py-5 my-5">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
+          <div class="card h-100 border-0 border-0" data-aos="fade-right">
+            <div class="icon col-md-2">
+              <i class="fas fa-globe-americas "></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>Worldwide</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quod nostrum. Dolores consequatur
+                commodi officiis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
+          <div class="card h-100 border-0" data-aos="fade-down">
+            <div class="icon col-md-2">
+              <i class="far fa-edit"></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>Customized Tour</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, rerum eligendi saepe blanditiis
+                aliquam officiis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3" data-aos="fade-left">
+          <div class="card h-100 border-0">
+            <div class="icon col-md-2">
+              <i class="far fa-flag"></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>Professional Guides</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus accusamus repudiandae laboriosam
+                ducimus et? Quod?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
+          <div class="card h-100 border-0" data-aos="fade-right">
+            <div class="icon col-md-2">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>Luxury Hotels</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur commodi iste sed
+                reprehenderit ex.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
+          <div class="card h-100 border-0" data-aos="fade-up">
+            <div class="icon col-md-2">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>Affordable Price</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cum nihil impedit nulla fugit.
+                Magnam?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
+          <div class="card h-100 border-0" data-aos="fade-left">
+            <div class="icon col-md-2">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="card-content col-md-10">
+              <h5>24/7 Service</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a provident atque sit, aspernatur
+                quae.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Testimonials Section -->
+
+  <section id="testimonials">
+    <div class="heading" data-aos="fade-up">
+      <h1>what our <span>clients</span> say</h1>
+    </div>
+    <div class="content" data-aos="fade-up">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facilis!</p>
+    </div>
+
+    <div class="slider">
+      <div id="reviewSlider" class="carousel slide" data-touch="true" data-ride="carousel" data-aos="fade-up">
+        <ol class="carousel-indicators">
+          <li data-target="#reviewSlider" data-slide-to="0" class="active"></li>
+          <li data-target="#reviewSlider" data-slide-to="1"></li>
+          <li data-target="#reviewSlider" data-slide-to="2"></li>
+          <li data-target="#reviewSlider" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="slides carousel-item active">
+            <div class="slides-content py-5">
+              <div class="img-area">
+                <img src="img/pic-1.png">
+              </div>
+              <h6>Kristen Power</h6>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                obcaecati laudantium mollitia
+                placeat
+                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
+                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+            </div>
+          </div>
+          <div class="slides carousel-item">
+            <div class="slides-content py-5">
+              <div class="img-area">
+                <img src="img/pic-2.png" class="d-block">
+              </div>
+              <h6>Matt Jones</h6>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                obcaecati laudantium mollitia
+                placeat
+                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
+                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+            </div>
+          </div>
+          <div class="slides carousel-item">
+            <div class="slides-content py-5">
+              <div class="img-area">
+                <img src="img/pic-3.png" class="d-block">
+              </div>
+              <h6>Max Hooper</h6>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                obcaecati laudantium mollitia
+                placeat
+                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
+                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+            </div>
+          </div>
+          <div class="slides carousel-item">
+            <div class="slides-content py-5">
+              <div class="img-area">
+                <img src="img/pic-4.png" class="d-block">
+              </div>
+              <h6>Kader Hollins</h6>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                obcaecati laudantium mollitia
+                placeat
+                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
+                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#reviewSlider" data-slide="prev">
+          <span aria-hidden="true"><i class="fas fa-chevron-left prev-btn"></i></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#reviewSlider" data-slide="next">
+          <span aria-hidden="true"><i class="fas fa-chevron-right next-btn"></i></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Contact Section -->
+
+  <section id="contact">
+    <div class="heading pt-3" data-aos="fade-up">
+      <h1><span>Contact</span> Us</h1>
+      <div class="content">
+      </div>
+    </div>
+
+    <div class="form-body">
+      <div class="container py-5">
+        <form class="form-content my-5" data-aos="zoom-in-right">
+          <div class="row">
+            <div class="form-group col-md-3">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group col-md-3">
+              <input type="email" class="form-control" placeholder="email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <button onclick="sendMessage()" type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="bg-color container-fluid">
+      <div class="footer-content" data-aos="fade-up">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 pb-4">
+            <img class="footer-logo" src="/img/logo.svg" alt="FunTravel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat et totam? Accusamus possimus dicta
+              tenetur eveniet nisi facere veniam, unde iusto!</p>
+            <div class="social-media pt-3">
+              <!-- Facebook -->
+              <a href="https://facebook.com"><i class="fab fa-facebook-f circle-icon"></i></a>
+              <!-- Twitter -->
+              <a href="https://twitter.com"><i class="fab fa-twitter circle-icon"></i></a>
+              <!-- Instagram -->
+              <a href="https://instagram.com"><i class="fab fa-instagram circle-icon"></i></a>
+              <!-- Line -->
+              <a href="https://line.me/"><i class="fab fa-line circle-icon"></i></a>
+
+            </div>
+          </div>
+          <div class="link-heading col-12 col-md-6 col-lg-3 pb-4">
+            <h5>Quick Links</h5>
+            <div class="links">
+              <a href="#home">home</a>
+              <a href="#about">about us</a>
+              <a href="#tours">tours</a>
+              <a href="#services">services</a>
+              <a href="#testimonials">testimonials</a>
+              <a href="#contact">contact</a>
+            </div>
+          </div>
+          <div class="link-heading col-12 col-md-6 col-lg-3 pb-4">
+            <h5>Support</h5>
+            <div class="links">
+              <a href="#">account</a>
+              <a href="#">customer service</a>
+              <a href="#">feedback</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+          <div class="link-heading col-12 col-md-6 col-lg-3">
+            <h5>Newsletter</h5>
+            <p>Subscribe for latest updates!</p>
+            <h6 id="thankYouMsg">Thank you for subscribing!</h6>
+            <input id="myInput" type="email" class="px-3" placeholder="Enter your email">
+            <button onclick="subscribeBtn()" id="sub">Subscribe</button>
+          </div>
+        </div>
+        <hr>
+        <!-- Credit -->
+        <p style="text-align: center;" id="credit"> &copy; 2021 by C.H. </p>
+      </div>
+  </footer>
+
+  <!-- scroll to top -->
+  <button class="scrollBtn"><i class="fas fa-caret-up"></i></button>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <script src="/Javascript/script.js"></script>
+</body>
+
+</html>

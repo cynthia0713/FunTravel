@@ -1,0 +1,38 @@
+@import "./variables";
+@import "./header";
+@import "./hero";
+@import "./search-form";
+@import "./about";
+@import "./tours";
+@import "./services";
+@import "./testimonials";
+@import "./contact";
+@import "./footer";
+@import "./scrollTop";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  // scroll-padding-top: 7rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(0.95);
+  }
+  70%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.95);
+  }
+}
+  
+
+

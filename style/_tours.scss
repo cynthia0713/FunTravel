@@ -1,0 +1,125 @@
+#tours{
+  .heading{
+    justify-content: center;
+    align-items: center;
+    h1{
+      color: $blue;
+      margin-right: 1rem;
+      letter-spacing: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: $font-heading;
+      span{
+        position: relative;
+        &::before{
+          content: "";
+          background-color: $lime;
+          opacity: 0.7;
+          position: absolute;
+          top: 2.2rem;
+          left: 0.7rem;
+          width: 85%;
+          height: 0.5rem;
+          border-radius: 10px;
+        }
+      } 
+    }
+    h3{
+      color: $primary;
+      letter-spacing: 0.5rem;
+    }
+  }
+
+  .content{
+    justify-content: center;
+    text-align: center;
+    img{
+      position: relative;
+      width: 15%;
+      bottom: 20%;
+      right: 0;
+    }
+    p{
+      color: $gray;
+      width: 70%;
+      margin-top: 1.2rem;
+    }
+  
+  }
+
+  .see-more{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a{
+      color: $gray;
+      text-decoration: none;
+      font-size: 0.8rem;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+
+  .card{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: inline-block;
+
+    img{
+      border-radius: 0.3rem;
+    }
+
+    h5{
+      letter-spacing: 0.1rem;
+      color: $primary;
+      font-weight: 600;
+    }
+    h6{
+      color: $gray;
+      font-size: 0.85rem;
+      i{
+        color: $lime;
+        font-size: 1rem;
+      }
+    }
+
+    p{
+      font-size: 0.85rem;
+      color: $gray;
+    }
+
+ 
+  .card-body{
+    a{
+      background-color: $secondary;
+      color: white;
+      text-transform: uppercase;
+      font-family: $font-family-sans-serif;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      padding: 0.65rem 1.5rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+      &:hover{
+        transform: scale(1);
+        animation: pulse 2s infinite;
+      }
+    }
+    .price{
+      font-size: 1.2rem;
+      font-family: $font-family-sans-serif;
+      #dollar-sign{
+        color: $lime;
+        font-weight: 600;
+      }
+      #per-day{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        color: $gray;
+      }
+    }
+  }
+   
+  
+}
+
+}

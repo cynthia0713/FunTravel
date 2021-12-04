@@ -1,0 +1,83 @@
+#contact{
+  .heading{
+    text-align: center;
+    margin-top: 5rem;
+    h1{
+      color: $blue;
+      letter-spacing: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: $font-heading;
+      span{
+        position: relative;
+        &::before{
+          content: "";
+          background-color: $lime;
+          opacity: 0.7;
+          position: absolute;
+          top: 2.2rem;
+          left: 0.7rem;
+          width: 85%;
+          height: 0.5rem;
+          border-radius: 10px;
+        }
+      } 
+    }
+    h3{
+      color: $primary;
+      letter-spacing: 0.5rem;
+    }
+    .content{
+      justify-content: center;
+      text-align: center;
+      p{
+        color: $gray;
+        margin-top: 1.2rem;
+      }
+    }
+  }
+  .container{
+    width: 80%;
+  }
+
+  .form-body{
+    background: url('/img/mountain.jpg'),linear-gradient(180deg, rgba(44, 63, 173, 0.712), rgba(28, 127, 207, 0.616)) no-repeat;
+    min-height: 500px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+
+    input, textarea{
+      border: 2px solid $primary; 
+      background-color: rgba(235, 235, 235, 0.8);
+      text-transform: capitalize;
+      &::placeholder{
+        color: $gray;
+      }
+      &:focus{
+        background-color: white;
+        box-shadow: none;
+        border: 3px solid $primary;
+      }
+    }
+
+    .form-control{
+      padding: 1.5rem;
+    }
+    button{
+      outline: none;
+      border: none;
+      color: white;
+      background-color: $secondary;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 0.5rem;
+      width: 50%;
+      text-shadow: 0 0 10px rgba(36, 36, 36, 0.384);
+      transition: transform 0.2s ease-in-out;
+      &:hover{
+        transform: scaley(1.1);
+      }
+    }
+  }
+}

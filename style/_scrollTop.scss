@@ -1,0 +1,16 @@
+.scrollBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none; 
+  background-color: $primary;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  z-index: 999;
+  display: none;
+  i{
+    font-size: 2rem;
+    color: white;
+  }
+} 
