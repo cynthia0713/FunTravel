@@ -2,13 +2,16 @@
   .heading{
     justify-content: center;
     align-items: center;
+    font-family: $font-heading;
     h1{
-      color: $blue;
+      color: $primary;
       margin-right: 1rem;
-      letter-spacing: 0.5rem;
+      letter-spacing: 2px;
       font-weight: 600;
       text-transform: uppercase;
-      font-family: $font-heading;
+    }
+    h4{
+      color: $blue;
       span{
         position: relative;
         &::before{
@@ -16,17 +19,13 @@
           background-color: $lime;
           opacity: 0.7;
           position: absolute;
-          top: 2.2rem;
-          left: 0.7rem;
+          top: 2rem;
+          left: 0.5rem;
           width: 85%;
-          height: 0.5rem;
+          height: 0.25rem;
           border-radius: 10px;
         }
       } 
-    }
-    h3{
-      color: $primary;
-      letter-spacing: 0.5rem;
     }
   }
 
@@ -64,62 +63,71 @@
   .card{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     display: inline-block;
-
+    transition: 0.3s ease-out;
+    border-radius: 1rem 1rem 0 0 ;
     img{
-      border-radius: 0.3rem;
+      border-radius: 0.5rem 0.5rem 0 0 ;
+      height: 15rem;
+      transition: 0.3s ease-out;
     }
 
-    h5{
-      letter-spacing: 0.1rem;
-      color: $primary;
-      font-weight: 600;
-    }
-    h6{
-      color: $gray;
-      font-size: 0.85rem;
-      i{
-        color: $lime;
-        font-size: 1rem;
-      }
-    }
-
-    p{
-      font-size: 0.85rem;
-      color: $gray;
-    }
-
- 
-  .card-body{
-    a{
-      background-color: $secondary;
-      color: white;
+    .card-body{
+      font-family: $font-family-sans-serif;
+      height: 18rem;
       text-transform: uppercase;
-      font-family: $font-family-sans-serif;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-      padding: 0.65rem 1.5rem;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
-      &:hover{
-        transform: scale(1);
-        animation: pulse 2s infinite;
+      cursor: pointer;
+      h5{
+        letter-spacing: 0.1rem;
+        color: $black;
+        font-family: $font-heading;
       }
-    }
-    .price{
-      font-size: 1.2rem;
-      font-family: $font-family-sans-serif;
-      #dollar-sign{
-        color: $lime;
-        font-weight: 600;
+      h6{
+        color: $gray;
+        font-size: 0.85rem;
+        i{
+          color: $lime;
+          font-size: 0.8rem;
+        }
       }
-      #per-day{
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
+  
+      p{
+        font-size: 0.85rem;
         color: $gray;
       }
+      a{
+        background-color: $secondary;
+        color: whitesmoke;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        padding: 0.65rem 1.5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+        border-radius: 1rem;
+        &:hover{
+          background-color: transparent;
+          color: $primary;
+          transition: 0.5s;
+          border: 2px solid $primary;
+        }
+      }
+      .price{
+        font-size: 1rem;
+        font-family: $font-family-sans-serif;
+        #currency{
+          color: $lime;
+        }
+        span{
+          del{
+            color: $gray;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+    &:hover{
+      transform: translate(0,-5px);
     }
   }
-   
-  
-}
 
 }

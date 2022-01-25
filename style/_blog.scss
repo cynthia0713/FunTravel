@@ -1,0 +1,49 @@
+#blog{
+  font-family: $font-heading;
+  .heading{
+    justify-content: center;
+    align-items: center;
+    h1{
+      color: $primary;
+      margin-right: 1rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    h4{
+      color: $blue;
+      span{
+        position: relative;
+        &::before{
+          content: "";
+          background-color: $lime;
+          opacity: 0.7;
+          position: absolute;
+          top: 2rem;
+          left: 0.5rem;
+          width: 85%;
+          height: 0.25rem;
+          border-radius: 10px;
+        }
+      } 
+    }
+  }
+
+  .content{
+    justify-content: center;
+    text-align: center;
+    p{
+      color: $gray;
+      width: 70%;
+      margin-top: 1.2rem;
+    }
+  
+  }
+
+.img-thumbnail {
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+}

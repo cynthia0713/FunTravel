@@ -1,12 +1,4 @@
-// AOS JS
-AOS.init({
-  duration: 800,
-  delay: 400,
-  mirror: true
-});
-
-
-
+//onclick function
 function subscribeBtn() {
   var subscribed = document.getElementById("sub")
 
@@ -17,6 +9,8 @@ function subscribeBtn() {
   subscribed.remove();
 }
 
+
+//Scroll-to-top functions
 const scrollToTop = document.querySelector('.scrollBtn');
 
 scrollToTop.addEventListener("click", function () {
@@ -25,9 +19,19 @@ scrollToTop.addEventListener("click", function () {
 })
 
 document.addEventListener("scroll", function (e) {
-  if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
     scrollToTop.style.display = "block"
   } else {
     scrollToTop.style.display = "none"
   }
 })
+
+
+let loader = document.getElementById("preload-container");
+
+window.addEventListener("load", function () {
+  console.log("page fully loaded")
+  loader.style.display = "none";
+
+})
+

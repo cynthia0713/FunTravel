@@ -1,66 +1,74 @@
 #about{
-  background: url("../img/mountain-top.jpg"),linear-gradient(0deg, rgba(24, 95, 226, 0.493), rgba(54, 219, 156, 0.329)) no-repeat;
+  background: url("../img/klunae.jpeg"),linear-gradient(0deg, rgb(0, 0, 0), rgba(224, 224, 224, 0.781)) no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-blend-mode: screen;
   min-height: 530px;
   width: 100%;
+  line-height: 2rem;
   .heading{
-    padding-top: 6rem;
-    margin-left: 10rem;
-    h1{
-      color: $blue;
-      letter-spacing: 0.5rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: $font-heading;
-      span{
-        position: relative;
-        &::before{
-          content: "";
-          background-color: $lime;
-          opacity: 0.7;
-          position: absolute;
-          top: 2.2rem;
-          left: 0.7rem;
-          width: 85%;
-          height: 0.5rem;
-          border-radius: 10px;
-        }
-      } 
-    }
-    h3{
-      color: $primary;
-      letter-spacing: 0.5rem;
-    }
-  }
-
-  .content{
+    display: flex;
+    padding-top: 5rem;
+    // margin-left: 10rem;
     align-items: center;
-    width: 30%;
-    margin-left: 10rem;
-    p{
-      color: $black;
-      margin-top: 1.2rem;
+    justify-content: center;
+      h1{
+        color: $primary;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: $font-heading; 
+        text-shadow: 0px 1px 1px rgb(162, 180, 197);
+      }
+      h4{
+        color: $primary;
+        font-family: $font-heading;
+        span{
+          position: relative;
+          &::before{
+            content: "";
+            background-color: $lime;
+            opacity: 0.7;
+            position: absolute;
+            top: 2rem;
+            left: 0.5rem;
+            width: 85%;
+            height: 0.25rem;
+            border-radius: 10px;
+          }
+        } 
+      }
     }
-  }
-  .read-more{
-    background: $secondary;
-    color: white;
-    width: 10rem;
-    margin: 1.5rem 5rem;
-    padding: 1rem;
-    border-radius: 10px;
-    font-family: $font-family-sans-serif;
-    letter-spacing: 2px;
-    box-shadow: 0 0 0 0 rgba(#2596be, .5);
-    transform: scale(1);
-    animation: pulse 2s infinite;
-    &:hover{
-      cursor: pointer;
-      animation: none;
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      margin-left: 25rem;
+      p{
+        display: inline-block;
+        color: $black;
+        margin: 1.2rem 0;
+      }
+      .read-more{
+        background: $secondary;
+        color: white;
+        width: 10rem;
+        margin-right: 2rem;
+        padding: 0.8rem;
+        border-radius: 10px;
+        font-family: $font-family-sans-serif;
+        letter-spacing: 2px;
+        box-shadow: 0 0 0 0 rgba(#2596be, .5);
+        transform: scale(1);
+        animation: pulse 1.5s infinite;
+        &:hover{
+          cursor: pointer;
+          animation: none;
+        }
+      }
     }
-  }
   
 }

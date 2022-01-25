@@ -1,76 +1,103 @@
+.fade {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
 .modal-content{
-text-transform: capitalize;
-.email-login{
-  form{
-    .icon{
-      position: absolute;
-      color: $primary;
-      top: 30%;
-      left: 6%;
-    }
-    input{
-      border: 1px solid $primary;
-    }
+  text-transform: capitalize;
+  .email-login{
+    form{
+      .icon{
+        position: absolute;
+        color: $primary;
+        top: 30%;
+        left: 6%;
+      }
+      input{
+        box-shadow: none;
+        &:focus{
+          border: 1px solid $primary;
+        }
+      }
 
-    .forgotPw{
-      a{
-        color: $gray;
-        float: right;
+      .forgotPw, .signUp, .userLogin{
+        a{
+          color: $gray;
+          font-size: 0.85rem;
+        }
+        #v-bar{
+          color: $gray;
+        }
+      }
+      button{
+        color: whitesmoke;
+        background: $primary;
+        width: 100%; 
+        padding: 0.8rem;
+        &:hover{
+          background: linear-gradient(180deg, rgba(37,150,190,0.8) 6%, rgba(0,212,255,0.8) 100%);
+        }
       }
     }
-    button{
-      background: linear-gradient(180deg, rgba(37,150,190,1) 6%, rgba(0,212,255,1) 100%);
-      color: white;
-      width: 100%; 
-      &:hover{
-        background: linear-gradient(180deg, rgba(37,150,190,0.8) 6%, rgba(0,212,255,0.8) 100%);
+
+  }
+
+  .modal-body{
+    .login-heading{
+      h6{
+        font-family: $font-heading
+      }
+      span{
+        font-size: 0.8rem;
+        font-family: $font-heading;
       }
     }
-  }
-
-}
-
-h6{
-  font-family: $font-family-sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.social-icon{
-  display: flex;
-  justify-content: space-around;
-  i{
-    font-size: 3rem;
-    &:hover{
-      cursor: pointer;
-      opacity: 0.8;
+    .social-heading{
+      text-align: center;
     }
-  }
-  .fb-icon{
-    color: #3b5998;
-  }
-  .gp-icon{
-    color: #dd4b39;
-  }
-  .line-icon{
-    color:  #00B900;
-  }
-}
-
-  .divider{
-    text-align: center;
-    #divider-txt{
-      color: $gray;
+    .social-icon{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 3rem;
+        padding: 0 1rem;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+      .fb-icon{
+        color: #3b5998;
+      }
+      .gp-icon{
+        color: #dd4b39;
+      }
+      .line-icon{
+        color:  #00B900;
+      }
     }
-    &:before, &:after{
-      content: "";
-      display: inline-block;
-      position: relative;
-      background-color: lightgray;
-      height: 1px;
-      width: 45%;
-      vertical-align: middle;
-    }
+    
+      .divider{
+        text-align: center;
+        #divider-txt{
+          color: $gray;
+        }
+        &:before, &:after{
+          content: "";
+          display: inline-block;
+          position: relative;
+          background-color: lightgray;
+          height: 1px;
+          width: 45%;
+          vertical-align: middle;
+        }
+      }
+      label{
+        font-size: 0.8rem;
+        a{
+          color: $primary;
+        }
+      }
   }
 
 }

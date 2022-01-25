@@ -9,19 +9,19 @@
 
   <!-- Font Awesome CDN  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Concert+One&family=Fuzzy+Bubbles&family=Poppins:wght@300;400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- AOS CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Bootstrap files -->
-  <!-- <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script> -->
 
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Bootstrap files -->
   <link rel="stylesheet" href="Scss_Bootstrap/scss/bootstrap.css">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style/style.css">
 
@@ -29,9 +29,35 @@
 
 <body>
 
+  <!-- Preloader -->
+  <div id="preload-container">
+    <div id="pageLoader">
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+      <span style="--i:4"></span>
+      <span style="--i:5"></span>
+      <span style="--i:6"></span>
+      <span style="--i:7"></span>
+      <span style="--i:8"></span>
+      <span style="--i:9"></span>
+      <span style="--i:10"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:13"></span>
+      <span style="--i:14"></span>
+      <span style="--i:15"></span>
+      <span style="--i:16"></span>
+      <span style="--i:17"></span>
+      <span style="--i:18"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <div class="airplane"></div>
+    </div>
+  </div>
+
   <!-- Navbar Section -->
   <header>
-
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="logo" src="img/logo.svg" alt="logo"></a>
@@ -46,17 +72,19 @@
 
         <div class="collapse navbar-collapse order-3 order-lg-2" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item ml-3"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item ml-3"><a href="#about" class="nav-link">About Us</a></li>
-            <li class="nav-item ml-3"><a href="#tours" class="nav-link">Tours</a></li>
-            <li class="nav-item ml-3"><a href="#services" class="nav-link">Services</a></li>
-            <li class="nav-item ml-3"><a href="#testimonials" class="nav-link">Testimonials</a></li>
-            <li class="nav-item ml-3"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item ml-3"><a href="#home" class="nav-link">首頁 <span>Home</span></a>
+            </li>
+            <li class="nav-item ml-3"><a href="#about" class="nav-link">關於我們 <span>About Us</span></a></li>
+            <li class="nav-item ml-3"><a href="#tours" class="nav-link">推薦景點 <span>Tours</span></a></li>
+            <li class="nav-item ml-3"><a href="#services" class="nav-link">服務項目 <span>Services</span></a></li>
+            <li class="nav-item ml-3"><a href="#testimonials" class="nav-link">旅客評價 <span>Reviews</span></a></li>
+            <li class="nav-item ml-3"><a href="#blog" class="nav-link">景點分享 <span>Blog</span></a></li>
+            <li class="nav-item ml-3"><a href="#contact" class="nav-link">聯繫我們 <span>Contact</span></a></li>
           </ul>
         </div>
       </div>
 
-      <!-- Modal -->
+      <!-- Login Modal -->
       <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -66,7 +94,10 @@
               </button>
             </div>
             <div class="modal-body">
-              <h6>Login with social media account</h6>
+              <div class="login-heading social-heading">
+                <h6>使用社交平台帳戶登入</h6>
+                <span>Login with social media account</span>
+              </div>
               <div class="social-login my-4">
                 <div class="social-icon">
                   <i class="fab fa-facebook fb-icon"></i>
@@ -78,39 +109,171 @@
                 <span id="divider-txt">OR</span>
               </div>
               <div class="email-login mt-3">
-                <h6>Login with email</h6>
+                <div class="login-heading">
+                  <h6>會員帳號登入</h6>
+                  <span>Login with email</span>
+                </div>
                 <form>
                   <div class="row">
                     <div class="col">
                       <i class="fas fa-envelope icon"></i>
-                      <input class="form-control mt-2 mb-4 px-5 py-4" type="email" placeholder="Email" required>
+                      <input class="form-control mt-2 mb-4 px-5 py-4" type="email" placeholder="電子郵件" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col">
                       <i class="fas fa-lock icon mt-2"></i>
-                      <input class="form-control mt-2 px-5 py-4" type="password" placeholder="Password" required>
+                      <input class="form-control mt-2 px-5 py-4" type="password" placeholder="密碼" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col forgotPw pb-4">
-                      <a href="">Forgot Passowrd?</a>
+                      <a href="#forgotPwModal" data-toggle="modal" data-target="#forgotPwModal"
+                        data-dismiss="modal">忘記密碼?</a>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col">
-                      <button class="btn mb-4">Login</button>
+                      <button class="btn">登入</button>
                     </div>
                   </div>
-
+                  <div class="row">
+                    <div class="col signUp pb-4">
+                      <a href="#signupModal" data-toggle="modal" data-target="#signupModal"
+                        data-dismiss="modal">加入會員</a>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Signup Modal -->
+      <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header py-0 border-0">
+              <button type="button" class="close mt-1" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times exit-icon"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="login-heading social-heading">
+                <h6>使用社交平台帳戶登入</h6>
+                <span>Login with social media account</span>
+              </div>
+              <div class="social-login my-4">
+                <div class="social-icon">
+                  <i class="fab fa-facebook fb-icon"></i>
+                  <i class="fab fa-google-plus gp-icon"></i>
+                  <i class="fab fa-line line-icon"></i>
+                </div>
+              </div>
+              <div class="divider">
+                <span id="divider-txt">OR</span>
+              </div>
+              <div class="email-login mt-3">
+                <div class="login-heading">
+                  <h6>加入會員</h6>
+                  <span>Signup with email</span>
+                </div>
+                <form>
+                  <div class="row">
+                    <div class="col">
+                      <i class="fas fa-envelope icon"></i>
+                      <input class="form-control mt-2 mb-4 px-5 py-4" type="email" placeholder="電子郵件" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <i class="fas fa-lock icon mt-2"></i>
+                      <input class="form-control mt-2 px-5 py-4" type="password" placeholder="密碼" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col pb-4">
+                      <input type="checkbox" id="agreement">
+                      <label for="agreement">
+                        我已詳閱並同意 <a href="#">使用者條款</a> & <a href="#">隱私權保護政策</a><span style="color: red;">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn">註冊</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col userLogin pb-4">
+                      <a href="#loginModal" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">
+                        會員登入</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- </nav> -->
+
+      <!-- Forgot Password Modal -->
+      <div class="modal fade" id="forgotPwModal" tabindex="-1" aria-labelledby="forgotPwModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header py-0 border-0">
+              <button type="button" class="close mt-1" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times exit-icon"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="login-heading social-heading">
+                <h6>使用社交平台帳戶登入</h6>
+                <span>Login with social media account</span>
+              </div>
+              <div class="social-login my-4">
+                <div class="social-icon">
+                  <i class="fab fa-facebook fb-icon"></i>
+                  <i class="fab fa-google-plus gp-icon"></i>
+                  <i class="fab fa-line line-icon"></i>
+                </div>
+              </div>
+              <div class="divider">
+                <span id="divider-txt">OR</span>
+              </div>
+              <div class="email-login mt-3">
+                <div class="login-heading">
+                  <h6>重設密碼</h6>
+                  <span>Reset Password</span>
+                </div>
+                <form>
+                  <div class="row">
+                    <div class="col">
+                      <i class="fas fa-envelope icon"></i>
+                      <input class="form-control mt-2 mb-4 px-5 py-4" type="email" placeholder="電子郵件" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn">重新設定密碼</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col userLogin pb-4">
+                      <a href="#loginModal" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">會員登入
+                      </a><span id="v-bar" style="color: lightgray">|</span>
+                      <a href="#signupModal" data-toggle="modal" data-target="#signupModal"
+                        data-dismiss="modal">加入會員</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
 
   </header>
 
@@ -119,28 +282,27 @@
     <div id="heroResponsive" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="overlay carousel-item active" data-interval="3000">
-          <img src="img/hero-1.jpg" class="d-block w-100" alt="canoe">
+          <img src="img/boat-water.jpg" class="d-block w-100" alt="canoe">
           <div class="hero-caption d-md-block">
-            <h3 data-aos="fade-down"><span>E</span>XPLORE</h3>
-            <h3 class="font-weight-light" data-aos="fade-down"><span>T</span>he <span>W</span>orld
-            </h3>
-            <p data-aos="fade-up" data-aos-offset="0">Travel to Live, Live to travel</p>
+            <h3 class="animate__animated animate__fadeInDown animate__delay-1s"><span>Explore</span> The World</h3>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s">Travel to Live, Live to travel</p>
           </div>
         </div>
         <div class="overlay carousel-item" data-interval="3000">
-          <img src="img/hero-2.jpg" class="d-block w-100" alt="grand-canyon">
+          <img src="img/hero-5.jpg" class="d-block w-100" alt="grand-canyon">
           <div class="hero-caption d-md-block">
-            <h3><span>E</span>XPLORE</h3>
-            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld</h3>
-            <p>Travel to Live, Live to travel</p>
+            <h3 class="animate__animated animate__slideInDown animate__delay--0.8s">New <span>Adventure</span> Awaits
+            </h3>
+            <p class="animate__animated animate__fadeInBottomLeft animate__delay-1s">Experience the world, one adventure
+              at a time</p>
           </div>
         </div>
         <div class="overlay carousel-item" data-interval="3000">
           <img src="img/hero-4.jpg" class="d-block w-100" alt="lake-house">
           <div class="hero-caption d-md-block">
-            <h3><span>E</span>XPLORE</h3>
-            <h3 class="font-weight-light"><span>T</span>he <span>W</span>orld</h3>
-            <p>Travel to Live, Live to travel</p>
+            <h3 class="animate__animated animate__zoomIn animate__delay-1s">Make Your Next Trip <span>Awesome</span>
+            </h3>
+            <p class="animate__animated animate__fadeInLeft animate__delay-2s">Live your travel dreams</p>
           </div>
         </div>
       </div>
@@ -154,79 +316,79 @@
           <span class="sr-only">Next</span>
         </button>
       </div>
-
     </div>
   </section>
 
 
   <!-- Search Form  -->
   <section>
-    <div class="form-section pb-5 mb-3">
-      <div class="container">
-        <div class="search-form">
-          <form>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="row">
-                  <div class="form-group" data-aos="zoom-in" data-aos-delay="150">
-                    <label for="location"><i class="fas fa-map-marker-alt ml-2 mr-2"></i>Location</label>
-                    <input type="text" class="form-control" id="location" placeholder="Where do you want to go?">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="row">
-                  <div class="form-group" data-aos="zoom-in" data-aos-delay="300">
-                    <label for="travel-date"><i class="fas fa-calendar-alt ml-2 mr-2"></i>Date</label>
-                    <input class="form-control" type="date" id="travel-date">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="row">
-                  <div class="form-group" data-aos="zoom-in" data-aos-delay="450">
-                    <label for="traveler"><i class="fas fa-user-friends ml-2 mr-2"></i>Traveler</label>
-                    <input type="number" min="0" max="50" class="form-control" id="traveler" placeholder="Guests">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-btn" data-aos="zoom-in" data-aos-delay="600">
-                  <button class="submit-btn">Search</button>
+    <div class="form-section pb-3 mb-3">
+      <!-- <div class="container-flu"> -->
+      <div class="search-form" data-aos="fade-down" data-aos-delay="50">
+        <form>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="row">
+                <div class="form-group" data-aos="zoom-in" data-aos-delay="150">
+                  <label for="location"><i class="fas fa-map-marker-alt ml-2 mr-2"></i>目的地</label>
+                  <input type="text" class="form-control" id="location" placeholder="輸入目的地、景點、活動...">
                 </div>
               </div>
             </div>
-          </form>
-        </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="form-group" data-aos="zoom-in" data-aos-delay="300">
+                  <label for="travel-date"><i class="fas fa-calendar-alt ml-2 mr-2"></i>選擇日期</label>
+                  <input class="form-control" type="date" id="travel-date">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="form-group" data-aos="zoom-in" data-aos-delay="450">
+                  <label for="traveler"><i class="fas fa-user-friends ml-2 mr-2"></i>旅客人數</label>
+                  <input type="number" min="0" max="50" class="form-control" id="traveler" placeholder="輸入人數">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-btn" data-aos="zoom-in" data-aos-delay="600">
+                <button class="submit-btn">搜尋</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
+      <!-- </div> -->
     </div>
   </section>
 
   <!-- About Us Section -->
   <section id="about">
     <div class="heading" data-aos="fade-down">
-      <h1><span>About</span> Us</h1>
+      <h1>關於我們</h1>
+      <h4><span>About</span> Us</h4>
     </div>
     <div class="content">
-      <p data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore
-        magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisiut aliquip ex eacommodo
-        consequat. </p>
-      <a class="read-more btn" href="#about" data-aos="fade-up">Read More</a>
+      <p data-aos="fade-right">
+        無論何時何地，我們都能帶你找到最棒的吃喝玩樂體驗！帶領你探索玩樂靈感，盡情享受世界的一切美好!
+        無論是挖掘在地新玩法或出國旅行，距離不是問題，重要的是體驗當中的玩樂點滴。呂克特曾經認為，真正的友誼，無論從正反看都應一樣，不可能從前面看是薔薇，而從反面看是刺。這不禁令我重新仔細的思考。塞內加說過一句經典的名言，在我看來，思路清晰的主要標誌是一個人獨自在一處徘徊的能力。強烈建議大家把這段話牢牢記住。
+      </p>
+      <a class="read-more btn" href="#about" data-aos="fade-up">點我看更多 <i class="fas fa-long-arrow-alt-right"></i></a>
     </div>
   </section>
 
   <!-- Tours Section -->
 
   <section id="tours">
-    <div class="container mt-5 pt-4">
-      <div class="heading d-flex flex-row" data-aos="fade-up">
-        <h1><span>Tours</span></h1>
-
+    <div class="container mt-5 pt-4" data-aos="fade-up">
+      <div class="heading d-flex flex-row">
+        <h1>推薦景點</h1>
+        <h4><span>Tours</span></h2>
       </div>
-      <div class="content d-flex flex-row" data-aos="fade-up">
+      <div class="content d-flex flex-row">
         <img src="img/plane-path.svg" data-aos="fade-up-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. </p>
+        <p>泰戈爾曾經提到過，閃射理想之光吧，心靈之星！說到推薦景點，你會想到什麼呢？現在就來看看這一生必去的景點吧！ </p>
         <img src="img/plane-path.svg" data-aos="fade-left">
       </div>
     </div>
@@ -239,97 +401,105 @@
       <div class="cards-container">
         <div class="row">
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+            <div class="card h-100 border-0 " data-aos="fade-down">
               <img src="img/colloseum.jpg" class="card-img-top" alt="colloseum">
               <div class="card-body">
-                <h5 class="card-title">Visit the Colloseum</h5>
+                <h5 class="card-title">羅馬競技場</h5>
                 <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Rome, Italy</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">
+                  親自走進歷經千年的義大利古文明，一睹古羅馬帝國兩千年來屹立不搖的歷史遺跡。 </p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
-              <img src="img/thailand.jpeg" class="card-img-top" alt="Phi Phi Island">
+            <div class="card h-100 border-0" data-aos="fade-up">
+              <img src="img/grand-palace.jpg" class="card-img-top" alt="Phi Phi Island">
               <div class="card-body">
-                <h5 class="card-title">Visit the Temple</h5>
-                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Chiang Mai, Thailand</span>
+                <h5 class="card-title">大皇宮玉佛寺</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Bangkok, Thailand</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">曼谷數度於「全球最佳旅遊目的地」奪冠，而其中玉佛寺＆大皇宮更是票選一定要來朝聖的曼谷景點NO.1</p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+            <div class="card h-100 border-0" data-aos="fade-up">
               <img src="img/pisa-italy.jpg" class="card-img-top" alt="pisa-tower">
               <div class="card-body">
-                <h5 class="card-title">Visit the Pisa Tower</h5>
+                <h5 class="card-title">比薩奇蹟廣場</h5>
                 <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Pisa, Italy</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">跟著當地官方認證導遊，欣賞奇蹟廣場上的四大建築：比薩大教堂、比薩斜塔（鐘樓）、聖若望洗禮堂、洗禮堂墓園 </p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
-              <img src="img/conrad-maldives-island.jpg" class="card-img-top" alt="...">
+            <div class="card h-100 border-0" data-aos="fade-up">
+              <img src="img/marina-bay.jpg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Visit Conrad Maldives Rangali Island</h5>
-                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Rangali Island, Maldives</span>
+                <h5 class="card-title">濱海灣金沙酒店</h5>
+                <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Marina Bay, Singapore</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">
+                  新加坡必去景點第一名絕對會花掉你一天的時間 此外國際知名的賭場、空中花園、水舞燈光秀和打卡聖地就夠花一整天</p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+            <div class="card h-100 border-0" data-aos="fade-up">
               <img src="img/eiffel-tower.jpg" class="card-img-top" alt="eiffel">
               <div class="card-body">
-                <h5 class="card-title">Visit the Eiffel Tower</h5>
+                <h5 class="card-title">艾菲爾鐵塔</h5>
                 <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Paris, France</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">登上巴黎必訪地標，從全市最高的建築居高臨下，俯瞰全世界最受歡迎的城市風景，盡情感受巴黎的魅力</p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-6 col-md-4 mb-4">
-            <div class="card h-100 px-3 py-3 border-0" data-aos="fade-up">
+            <div class="card h-100 border-0" data-aos="fade-up">
               <img src="img/canada.jpg" class="card-img-top" alt="canda">
               <div class="card-body">
-                <h5 class="card-title">Visit Banff National Park</h5>
+                <h5 class="card-title">班夫國家公園</h5>
                 <h6><i class="fas fa-map-marker-alt mr-2"><span></i>Alberta, Canada</span>
                 </h6>
-                <p class="card-text">A visit to Rome isn’t complete without a tour of the Colosseum! </p>
+                <p class="card-text">走遍必去班夫小鎮、​​弓河瀑布、驚奇角！帶您遊覽班夫國家公園及周邊景點。乘坐景觀纜車登上 360 度觀景台，享受壯麗景色 </p>
                 <div class="price">
-                  <span id="dollar-sign">＄</span><span id="amount">250</span><span id="per-day">/day</span>
+                  <span id="currency">twd</span>
+                  <span id="amount">535 <del>twd 1, 300</del></span>
                 </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn">查看更多</a>
               </div>
             </div>
           </div>
@@ -341,48 +511,45 @@
   <!-- Services Section -->
   <section id="services">
 
-    <div class="heading mt-5 pt-5" data-aos="fade-down">
-
-      <h1 class="mb-5">Our <span>Services</span></h1>
+    <div class="heading d-flex flex-row mt-5 pt-5" data-aos="fade-down" data-aos-delay="50">
+      <h1>服務項目</h1>
+      <h4>Our <span>Services</span></h4>
     </div>
 
-    <div class="service-container py-5 my-5">
+    <div class="service-container container py-5 my-5">
       <div class="row row-cols-1 row-cols-md-3">
         <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
-          <div class="card h-100 border-0 border-0" data-aos="fade-right">
+          <div class="card h-100 border-0 mr-5" data-aos="fade-right" data-aos-delay="150">
             <div class="icon col-md-2">
               <i class="fas fa-globe-americas "></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>Worldwide</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quod nostrum. Dolores consequatur
-                commodi officiis.
+              <h5>世界旅遊體驗</h5>
+              <p>我們的旅遊團隊不停的在嘗試全世界最安全，最特別，最擁有當地風味的體驗。就是為了可以提供這些不容易找的經驗給我們的旅客!
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
-          <div class="card h-100 border-0" data-aos="fade-down">
+          <div class="card h-100 border-0 mr-5" data-aos="fade-down" data-aos-delay="300">
             <div class="icon col-md-2">
               <i class="far fa-edit"></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>Customized Tour</h5>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, rerum eligendi saepe blanditiis
-                aliquam officiis!
+              <h5>客製行程</h5>
+              <p>關於安排行程，所有煩惱、擔憂、顧慮就交給我們讓專業旅遊規劃師為您量身打造專屬旅遊完整您旅行的意義
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4, col-sm-6, col-xs-12 mb-3" data-aos="fade-left">
-          <div class="card h-100 border-0">
+        <div class="col-md-4, col-sm-6, col-xs-12 mb-3" data-aos="fade-left" data-aos-delay="450">
+          <div class="card h-100 border-0 mr-5">
             <div class="icon col-md-2">
               <i class="far fa-flag"></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>Professional Guides</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus accusamus repudiandae laboriosam
-                ducimus et? Quod?
+              <h5>專業導遊</h5>
+              <p>我們的團隊不停地搜羅全世界最特別、最深入在地的體驗行程，只為了讓旅人安心地跟著KKday體驗全世界的精華。
               </p>
             </div>
           </div>
@@ -390,40 +557,37 @@
       </div>
       <div class="row row-cols-1 row-cols-md-3">
         <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
-          <div class="card h-100 border-0" data-aos="fade-right">
+          <div class="card h-100 border-0 mr-5" data-aos="fade-right" data-aos-delay="600">
             <div class="icon col-md-2">
               <i class="fas fa-hotel"></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>Luxury Hotels</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur commodi iste sed
-                reprehenderit ex.
+              <h5>輕鬆預訂</h5>
+              <p>無論您喜歡提前計畫旅途，或者習慣當下做決定，到FunTravel的網站，彈性選擇您的行程、輕鬆預訂，即時出遊！
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
-          <div class="card h-100 border-0" data-aos="fade-up">
+          <div class="card h-100 border-0 mr-5" data-aos="fade-up" data-aos-delay="750">
             <div class="icon col-md-2">
               <i class="fas fa-wallet"></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>Affordable Price</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cum nihil impedit nulla fugit.
-                Magnam?
+              <h5>優惠價格</h5>
+              <p>與當地景點及活動供應商直接合作，繞過所有中間環節，為旅客提供最優惠的價格。
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4, col-sm-6, col-xs-12 mb-3">
-          <div class="card h-100 border-0" data-aos="fade-left">
+          <div class="card h-100 border-0 mr-5" data-aos="fade-left" data-aos-delay="900">
             <div class="icon col-md-2">
               <i class="fas fa-headset"></i>
             </div>
             <div class="card-content col-md-10">
-              <h5>24/7 Service</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a provident atque sit, aspernatur
-                quae.</p>
+              <h5>24/7 貼心服務</h5>
+              <p>我們有專業的客服人員可到為您解決問題，線上即時客服，提供您最快速的服務。</p>
             </div>
           </div>
         </div>
@@ -433,29 +597,30 @@
   <!-- Testimonials Section -->
 
   <section id="testimonials">
-    <div class="heading" data-aos="fade-up">
-
-      <h1>what our <span>clients</span> say</h1>
-    </div>
-    <div class="content" data-aos="fade-up">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facilis!</p>
+    <div class="heading d-flex flex-row" data-aos="fade-up">
+      <h1>旅客評價</h2>
+        <h4>what our <span>travelers</span> say</h4>
     </div>
 
-    <div class="slider">
-      <div id="reviewSlider" class="carousel slide" data-touch="true" data-ride="carousel" data-aos="fade-up">
+    <div class="container-lg">
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-aos="fade-up"
+        data-aos-duration="1000">
         <ol class="carousel-indicators">
-          <li data-target="#reviewSlider" data-slide-to="0" class="active"></li>
-          <li data-target="#reviewSlider" data-slide-to="1"></li>
-          <li data-target="#reviewSlider" data-slide-to="2"></li>
-          <li data-target="#reviewSlider" data-slide-to="3"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="3"></li>
         </ol>
+
+        <!-- Slides -->
         <div class="carousel-inner">
           <div class="slides carousel-item active">
             <div class="slides-content py-5">
-              <div class="img-area">
+              <div class="profile">
                 <img src="img/pic-1.png">
               </div>
-              <h6>Kristen Power</h6>
+              <h5>Kristen Power</h5>
+              <h6>網頁設計師</h6>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -463,19 +628,37 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                obcaecati laudantium mollitia
-                placeat
-                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
-                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+              <p><i class="fas fa-quote-left"></i> 一路上導遊不僅待人和善，盡心介紹景點讓我們更加認識日本，這樣高品質且嫁個平易近人的行程，絕對是高CP值、獨自旅行的最佳選擇！ <i
+                  class="fas fa-quote-right"></i></p>
             </div>
+
           </div>
           <div class="slides carousel-item">
             <div class="slides-content py-5">
-              <div class="img-area">
-                <img src="img/pic-2.png" class="d-block">
+              <div class="profile">
+                <img src="img/pic-2.png">
               </div>
-              <h6>Matt Jones</h6>
+              <h5>Max Smith</h5>
+              <h6>攝影師</h6>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p><i class="fas fa-quote-left"></i> 一路上導遊不僅待人和善，盡心介紹景點讓我們更加認識日本，這樣高品質且嫁個平易近人的行程，絕對是高CP值、獨自旅行的最佳選擇！ <i
+                  class="fas fa-quote-right"></i></p>
+            </div>
+
+          </div>
+          <div class="slides carousel-item">
+            <div class="slides-content py-5">
+              <div class="profile">
+                <img src="img/pic-3.png">
+              </div>
+              <h5>Aaron Jones</h5>
+              <h6>前端工程師</h6>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -483,39 +666,19 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
               </div>
-              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                obcaecati laudantium mollitia
-                placeat
-                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
-                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+              <p><i class="fas fa-quote-left"></i>
+                導遊竭盡所能地照顧所有團員，行程完全按照表定時間走，導遊還主動幫我們拍照。我們非常感謝有這個套裝行程，讓我們在短時間參觀了許多間有特色的泰國寺廟。整體來說，我們非常喜愛這個行程 <i
+                  class="fas fa-quote-right"></i></p>
             </div>
           </div>
+
           <div class="slides carousel-item">
             <div class="slides-content py-5">
-              <div class="img-area">
-                <img src="img/pic-3.png" class="d-block">
+              <div class="profile">
+                <img src="img/pic-4.png">
               </div>
-              <h6>Max Hooper</h6>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                obcaecati laudantium mollitia
-                placeat
-                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
-                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
-            </div>
-          </div>
-          <div class="slides carousel-item">
-            <div class="slides-content py-5">
-              <div class="img-area">
-                <img src="img/pic-4.png" class="d-block">
-              </div>
-              <h6>Kader Hollins</h6>
+              <h5>Kader Hollins</h5>
+              <h6>品牌行銷</h6>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -523,34 +686,72 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
               </div>
-              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-                obcaecati laudantium mollitia
-                placeat
-                sed corrupti dolorem quaerat perspiciatis id assumenda. Quibusdam minus saepe ipsum adipisci fugit
-                reiciendis, quidem illo nemo. <i class="fas fa-quote-right"></i></p>
+              <p><i class="fas fa-quote-left"></i>
+                導遊竭盡所能地照顧所有團員，行程完全按照表定時間走，導遊還主動幫我們拍照。我們非常感謝有這個套裝行程，讓我們在短時間參觀了許多間有特色的泰國寺廟。整體來說，我們非常喜愛這個行程 <i
+                  class="fas fa-quote-right"></i></p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-target="#reviewSlider" data-slide="prev">
+
+        <button class="carousel-control-prev" type="button" data-target="#testimonialCarousel" data-slide="prev">
           <span aria-hidden="true"><i class="fas fa-chevron-left prev-btn"></i></span>
           <span class="sr-only">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-target="#reviewSlider" data-slide="next">
+        <button class="carousel-control-next" type="button" data-target="#testimonialCarousel" data-slide="next">
           <span aria-hidden="true"><i class="fas fa-chevron-right next-btn"></i></span>
           <span class="sr-only">Next</span>
         </button>
       </div>
+
     </div>
 
 
   </section>
 
+  <!-- Blogs-->
+  <section id="blog">
+    <div class="container mt-5 pt-4" data-aos="fade-up">
+      <div class="heading d-flex flex-row">
+        <h1>旅遊分享</h1>
+        <h4><span>Blog</span></h2>
+      </div>
+      <div class="content d-flex flex-row pb-3">
+        <p>泰戈爾曾經提到過，閃射理想之光吧，心靈之星！說到景點分享，你會想到什麼呢？ </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <img src="img/maldives-undersea.jpg" class="img-thumbnail" data-aos="fade-down">
+          <img src="img/klunae.jpeg" class="img-thumbnail" data-aos="flip-left" data-aos-delay="500">
+          <img src="img/lake-louise.jpeg" class="img-thumbnail" data-aos="fade-left">
+          <img src="img/canoe.jpg" class="img-thumbnail" data-aos="fade-right">
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="img/boxed-water.jpeg" class="img-thumbnail" data-aos="fade-">
+          <img src="img/alberta.jpeg" class="img-thumbnail" data-aos="fade-up">
+          <img src="img/thailand.jpeg" class="img-thumbnail" data-aos="fade-down">
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="img/sunflower.jpg" class="img-thumbnail" data-aos="fade-up">
+          <img src="img/eberhard.jpeg" class="img-thumbnail" data-aos="fade-down">
+          <img src="img/polynesia.jpg" class="img-thumbnail" data-aos="fade-left">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
   <!-- Contact Section -->
 
   <section id="contact">
     <div class="heading pt-3" data-aos="fade-up">
-      <h1><span>Contact</span> Us</h1>
+      <h1>聯繫我們</h1>
+      <h4><span>Contact</span> Us</h4>
       <div class="content">
+        <p>有任何問題歡迎聯繫我們！</p>
       </div>
     </div>
 
@@ -558,24 +759,28 @@
       <div class="container py-5">
         <form class="form-content my-5" data-aos="zoom-in-right">
           <div class="row">
-            <div class="form-group col-md-3">
-              <input type="text" class="form-control" placeholder="Name">
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="姓名 Name">
             </div>
-            <div class="form-group col-md-3">
-              <input type="email" class="form-control" placeholder="email">
+            <div class="form-group col-md-4">
+              <input type="email" class="form-control" placeholder="電子郵件 Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-8">
+              <input type="text" class="form-control" placeholder="主旨 Subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-8">
+              <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="你的訊息 Message..."></textarea>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control" placeholder="Subject">
+              <button onclick="sendMessage()" type="submit" class="btn">送出訊息</button>
             </div>
           </div>
-          <div class="row">
-            <div class="form-group col-md-6">
-              <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <button onclick="sendMessage()" type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </div>
@@ -604,44 +809,44 @@
             </div>
           </div>
           <div class="link-heading col-12 col-md-6 col-lg-3 pb-4">
-            <h5>Quick Links</h5>
+            <h5>認識我們</h5>
             <div class="links">
-              <a href="#home">home</a>
-              <a href="#about">about us</a>
-              <a href="#tours">tours</a>
-              <a href="#services">services</a>
-              <a href="#testimonials">testimonials</a>
-              <a href="#contact">contact</a>
+              <a href="#about">關於我們</a>
+              <a href="#tours">推薦景點</a>
+              <a href="#services">我們服務項目</a>
+              <a href="#testimonials">旅客評價</a>
             </div>
           </div>
           <div class="link-heading col-12 col-md-6 col-lg-3 pb-4">
-            <h5>Support</h5>
+            <h5>客服中心</h5>
             <div class="links">
-              <a href="#">account</a>
-              <a href="#">customer service</a>
-              <a href="#">feedback</a>
-              <a href="#">FAQ</a>
+              <a href="#">服務中心</a>
+              <a href="#">常見問題</a>
+              <a href="#">隱私權政策</a>
+              <a href="#">Cookies權政策</a>
+              <a href="#">服務條款</a>
             </div>
           </div>
           <div class="link-heading col-12 col-md-6 col-lg-3">
             <h5>Newsletter</h5>
-            <p>Subscribe for latest updates!</p>
-            <h6 id="thankYouMsg">Thank you for subscribing!</h6>
-            <input id="myInput" type="email" class="px-3" placeholder="Enter your email">
-            <button onclick="subscribeBtn()" id="sub">Subscribe</button>
+            <p>訂閱電子報以取的最新消息與活動內容</p>
+            <h6 id="thankYouMsg">電子報訂閱成功！</h6>
+            <input id="myInput" type="email" class="px-3" placeholder="輸入電子信箱">
+            <button onclick="subscribeBtn()" id="sub">訂閱</button>
           </div>
         </div>
         <hr>
         <!-- Credit -->
-        <p style="text-align: center;" id="credit"> &copy; 2021 by C.H. </p>
+        <p style="text-align: center;" id="credit">Copyright &copy; 2021 FunTravel. All Rights Reserved </p>
       </div>
   </footer>
 
   <!-- scroll to top -->
-  <button class="scrollBtn"><i class="fas fa-caret-up"></i></button>
+  <button class="scrollBtn"><i class="fas fa-arrow-up"></i></button>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -649,6 +854,16 @@
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
   <script src="Javascript/script.js"></script>
+  <script>
+    // AOS JS
+    AOS.init({
+      duration: 800,
+      delay: 400,
+      mirror: true
+    });
+
+
+  </script>
 </body>
 
 </html>

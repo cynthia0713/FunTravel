@@ -1,6 +1,6 @@
 .search-form{
-  background-color: white;
-  border-radius: 10px;
+  background-color: $blue;
+  border-radius: 0 0 1rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 15px;
   .form-group{
@@ -11,21 +11,26 @@
       border: none;
       outline: none;
       width: 250px;
+      background-color: $blue;
+      color: whitesmoke;
+      &::placeholder{
+        color: whitesmoke;
+      }
       &:hover, &:focus{
         box-shadow: none;
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid whitesmoke;
       }
     }
     input[type="date"].form-control:invalid{
       color: #6c757d;
     }
     label{
-      color: $primary;
+      color: whitesmoke;
       font-weight: 500;
     }
   }
   .form-btn{
-    padding: 25px;
+    padding: 1.5rem;
     margin-top: 10px;
     .submit-btn{
       text-transform: capitalize;
