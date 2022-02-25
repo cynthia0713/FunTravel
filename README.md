@@ -1,4 +1,4 @@
-# travel-website
+# Fun Travel
 
 # <a href="https://cynthia0713.github.io/travel-website/"> LIVE DEMO </a>
 
